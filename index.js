@@ -58,10 +58,12 @@ const isWhole = (a, b, c, d) => {
     };
 };
 
-console.log(isWhole(2, 3, 5, 2));
+// console.log(isWhole(2, 3, 5, 2));
 // doesn't work if input is an array, we need to loop through the array
+// ---- it does, like this:
+console.log(isWhole(...[2, 3, 5, 2]));
 
-const isWhole2 = (array) => {
+const isWhole2 = (...array) => {
     let sum = 0;
     for (const element of array) {
         sum += element;
@@ -74,4 +76,4 @@ const isWhole2 = (array) => {
     };
 };
 
-console.log(isWhole2([2, 3, 5, 2]));
+console.log(isWhole2(...[2, 3, 5, 2]));
